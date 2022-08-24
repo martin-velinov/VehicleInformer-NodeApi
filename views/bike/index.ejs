@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/bike.js"></script>
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/">Home</a>
+    <a class="create" href="/bike/create">Create new bike</a>
+    <h2>Table of bikes</h2>
+    
+      
+       <div class="header">
+         <p>Brand</p>
+         <p>Model</p>
+         <p>Registered</p>
+         <p>Year </p>
+         <p>CC</p>
+         
+       </div>
+      
+     
+    <table>
+     <% bikes.forEach(bike => { %>
+      <tr class="row">
+        <td ><%= bike.brand %></td>
+        <td><%= bike.model %></td>
+        <td><%= bike.registered %></td>
+        <td><%= bike.year %></td>
+        <td><%= bike.cc %></td>
+        <td class="noborder"><a class="green" href="/bike/<%= bike._id %>/view">View</a></td>
+        <td class="noborder"><a href="/bike/<%= bike._id %>/edit">Edit</a></td>
+        <td class="noborder"><button class="danger" onclick="deleteBike(`<%= bike._id %>`);">Delete</button></td>
+      </tr>
+     <% }) %>
+    </table>
+    <%- include("../partials/footer.ejs"); %>
+  </body>
+</html>

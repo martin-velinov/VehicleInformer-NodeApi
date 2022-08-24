@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/bike">Bikes</a>
+    <h2>Viewing bike with id #<%= bike._id %></h2>
+    
+
+    <div class="header">
+      <p>Brand</p>
+      <p>Model</p>
+      <p>Registered</p>
+      <p>Year </p>
+      <p>CC</p>
+      
+    </div>
+   
+  
+ <table>
+ 
+   <tr class="row">
+     <td ><%= bike.brand %></td>
+     <td><%= bike.model %></td>
+     <td><%= bike.registered %></td>
+     <td><%= bike.year %></td>
+     <td><%= bike.cc %></td>
+   </tr>
+  
+ </table>
+ <%- include("../partials/footer.ejs"); %>
+  </body>
+</html>

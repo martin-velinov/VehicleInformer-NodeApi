@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/car">Cars</a>
+    <h2>Viewing car with id #<%= car._id %></h2>
+    
+
+    <div class="header">
+      <p>Brand</p>
+      <p>Model</p>
+      <p>Registered</p>
+      <p>Year </p>
+      <p>Horse Power</p>
+      <p>Fuel</p>
+    </div>
+   
+  
+ <table>
+ 
+   <tr class="row">
+     <td ><%= car.brand %></td>
+     <td><%= car.model %></td>
+     <td><%= car.registered %></td>
+     <td><%= car.year %></td>
+     <td><%= car.horsePower %></td>
+     <td><%= car.fuel %></td>
+   </tr>
+  
+ </table>
+ <%- include("../partials/footer.ejs"); %>
+  </body>
+</html>

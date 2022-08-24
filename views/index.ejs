@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+
+  <body>
+    <%- include("../views/partials/nav.ejs"); %>
+    <div class="wrapper">
+      <h1>Vehicle Informer</h1>
+      <p>Welcome to our site.. browse, create, update and delete info about vehicles.</p>
+      
+      <div class="vehicles">
+        <div>
+          <img src="https://www.freepnglogos.com/uploads/bike-png/black-yamaha-yzf-sport-motorcycle-bike-png-image-pngpix-32.png" alt="">
+          <br><a class="homebtn" href="/bike">Bikes</a>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCn-aI4CSkOp_zWBh2kiaWr7U11Fe4SwkcGA&usqp=CAU" alt="">
+          <br><a class="homebtn" href="/car"></i>Cars</a>
+        </div>
+        <div>
+          <img src="https://mpng.subpng.com/20180329/utq/kisspng-2017-mercedes-benz-sprinter-2015-mercedes-benz-spr-van-5abd6d955b08a5.6760484515223637973729.jpg" alt="">
+          <br><a class="homebtn" href="/van">Vans</a>
+        </div>
+      </div>
+    </div>
+    <%- include("../views/partials/footer.ejs"); %>
+  </body>
+</html>

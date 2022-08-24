@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/bike.js"></script>
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a href="/bike">Bikes</a>
+    <br>
+    <form onsubmit="event.preventDefault()" id="form">
+      <label for="">Brand:</label>
+      <input type="text" name="brand" value="<%= bike.brand %>">
+      <label for="">Model:</label>
+      <input type="text" name="model" value="<%= bike.model %>">
+      <label for="">Registered:</label> 
+      <input type="text" name="registered" value="<%= bike.registered %>">
+      <label for="">Year:</label> 
+      <input type="number" name="year" value="<%= bike.year %>">
+      <label for=""> CC:</label> 
+      <input type="number" name="cc" value="<%= bike.cc %>">
+      <button onclick="updateBike(`<%= bike._id %>`);">Update</button>
+    </form>
+    <%- include("../partials/footer.ejs"); %>
+</body>
+</html>

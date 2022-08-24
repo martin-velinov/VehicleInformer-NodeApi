@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/car">Cars</a>
+    <br>
+    <form action="/car" method="post">
+      Brand: <input type="text" name="brand">
+      Model: <input type="text" name="model">
+      Registered: <input type="text" name="registered">
+      Year: <input type="number" name="year">
+      Horse Power: <input type="number" name="horsePower">
+      Fuel: <input type="text" name="fuel">
+        <button type="submit">Create</button>
+    </form>
+    <%- include("../partials/footer.ejs"); %>
+</body>
+</html>

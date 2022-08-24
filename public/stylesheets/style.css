@@ -1,0 +1,126 @@
+body {
+  background-color: #f2f2f2;
+  padding: 20px 200px;
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  font-size: 16px;
+  text-decoration: none;
+  background-color: orange;
+  color:#f2f2f2;
+  padding: 5px 15px;
+  border-radius: 5px;
+ 
+}
+button{
+  font-size: 16px;
+  text-decoration: none;
+  background-color: orange;
+  color:#f2f2f2;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.danger{
+  background-color: #e10a0a;
+  
+}
+.green{
+  background-color: green;
+}
+.create{
+  background-color: gray;
+}
+.row td {
+  color:#333;
+  text-align: center;
+  width: 113px;
+  font-size: 18px;
+  border:1px solid black;
+}
+.header{
+  display: flex;
+  margin:0;
+}
+.header p{
+  text-transform: uppercase;
+  text-align: center;
+  padding-top:10px;
+  border:1px solid black;
+  width: 117px;
+}
+
+input{
+  padding: 6px;
+  margin:10px 0px;
+  font-size: 16px;
+}
+
+table{
+  margin-top: -17px;
+}
+
+.noborder{
+  border: none!important;
+  width: 70px!important;
+}
+
+form{
+  margin-top: 50px;
+  width: 200px;
+}
+
+.homebtn{
+  padding: 10px 20px;
+  margin:40px 20px 0px 0px;
+  text-transform: uppercase;
+}
+
+.wrapper{
+  text-align: center;
+}
+
+.wrapper p{
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.wrapper img{
+  width: 130px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.vehicles{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer{
+  position: absolute;
+  color: #494848;
+  background-color: #dedede;
+  bottom: 20px;
+  text-align: center;
+  width: 70%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  
+}
+
+.navbtn{
+  background-color: #f2f2f2;
+  border:1px solid #333;
+  color:#494848;
+}
+
+img{
+  width: 50px;
+  height: 50px;
+}

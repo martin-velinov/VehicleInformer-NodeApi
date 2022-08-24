@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/bike">Bikes</a>
+    <br>
+    <form action="/bike" method="post">
+      Brand: <input type="text" name="brand">
+      Model: <input type="text" name="model">
+      Registered: <input type="text" name="registered">
+      Year: <input type="number" name="year">
+      CC: <input type="number" name="cc">
+
+        <button type="submit">Create</button>
+        <%- include("../partials/footer.ejs"); %>
+    </form>
+    
+</body>
+</html>
