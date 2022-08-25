@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var carRouter = require('./routes/car');
 var bikeRouter = require('./routes/bike');
 var vanRouter = require('./routes/van');
+var truckRouter = require('./routes/truck');
 var app = express();
 
 mongoose.connect(process.env.MONGO_URI)
@@ -33,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/', bikeRouter);
 app.use('/', carRouter);
 app.use('/', vanRouter);
+app.use('/', truckRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

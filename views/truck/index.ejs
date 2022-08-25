@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/truck.js"></script>
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a class="create" href="/">Home</a>
+    <a class="create" href="/truck/create">Create new Truck</a>
+    <h2>Table of trucks</h2>
+    
+      
+       <div class="header">
+         <p>Brand</p>
+         <p>Model</p>
+         <p>Type</p>
+         <p>Year </p>
+         <p>Horse Power</p>
+         <p>Payload(kg)</p>
+       </div>
+      
+     
+    <table>
+     <% trucks.forEach(truck => { %>
+      <tr class="row">
+        <td ><%= truck.brand %></td>
+        <td><%= truck.model %></td>
+        <td><%= truck.type %></td>
+        <td><%= truck.year %></td>
+        <td><%= truck.horsePower %></td>
+        <td><%= truck.payload %></td>
+        <td class="noborder"><a class="green" href="/truck/<%= truck._id %>/view">View</a></td>
+        <td class="noborder"><a href="/truck/<%= truck._id %>/edit">Edit</a></td>
+        <td class="noborder"><button class="danger" onclick="deleteTruck(`<%= truck._id %>`);">Delete</button></td>
+      </tr>
+     <% }) %>
+    </table>
+    <%- include("../partials/footer.ejs"); %>
+  </body>
+</html>

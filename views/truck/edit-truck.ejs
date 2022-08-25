@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/truck.js"></script>
+  </head>
+  <body>
+    <%- include("../partials/nav.ejs"); %>
+    <a href="/truck">Trucks</a>
+    <br>
+    <form onsubmit="event.preventDefault()" id="form">
+      <label for="">Brand:</label>
+      <input type="text" name="brand" value="<%= truck.brand %>">
+      <label for="">Model:</label>
+      <input type="text" name="model" value="<%= truck.model %>">
+      <label for="">Type:</label> 
+      <input type="text" name="type" value="<%= truck.type %>">
+      <label for="">Year:</label> 
+      <input type="number" name="year" value="<%= truck.year %>">
+      <label for=""> Horse Power:</label> 
+      <input type="number" name="horsePower" value="<%= truck.horsePower %>">
+      <label for=""> payload(kg):</label> 
+      <input type="number" name="payload" value="<%= truck.payload %>">
+      <button onclick="updateTruck(`<%= truck._id %>`);">Update</button>
+    </form>
+    <%- include("../partials/footer.ejs"); %>
+</body>
+</html>
